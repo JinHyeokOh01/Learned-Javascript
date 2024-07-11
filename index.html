@@ -6,17 +6,29 @@
         <link href="main.css" rel="stylesheet">
     </head>
     <body>
-        <div id='alert' class="alert-box">this is 알림창
-            <button onclick="controlBox('none')">닫기</button>
+        <div id='alert' class="alert-box">
+            <p class="title1">this is 알림창</p>
+            <button id="close">닫기</button>
         </div>
-        <button onclick="controlBox('block')">열기</button>
+        <button id="open">열기</button>
         <button onclick="controlBox('block', '아이디입력하세요')">버튼1</button>
         <button onclick="controlBox('block', '비번입력하세요')">버튼2</button>
     </body>
     <script>
+
+        document.getElementById('open').addEventListener('mouseover', function(){
+            document.getElementById('alert').style.display='block';
+        });
+        document.getElementById('close').addEventListener('click', function(){
+            document.getElementById('alert').style.display='none';
+        });
+
         function controlBox(val, con){
             document.getElementById('alert').style.display=val;
             document.getElementById('alert').innerHTML=con;
+        }
+        function controlclass(val,con){
+            document.getElementsByClass('title1')[0].innerHTML="알림창입니다.";
         }
     </script>
 </html>
