@@ -46,10 +46,10 @@
             $('.hello').fadeOut();
         })
         $('#login-btn').on('click', function(){
-            $('.black-bg').fadeIn();
+            $('.black-bg').addClass('show-modal');
         })
         $('#close').on('click', function(){
-            $('.black-bg').fadeOut();
+            $('.black-bg').removeClass('show-modal');
         })
         document.querySelector('.navbar-toggler').addEventListener('click', function(){
             document.querySelectorAll('.list-group')[0].classList.toggle('show');
