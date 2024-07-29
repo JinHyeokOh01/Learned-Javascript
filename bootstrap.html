@@ -66,9 +66,13 @@
         });
 
         document.querySelector('#mysubmit').addEventListener('click', function(e){
-          if(document.querySelectorAll('.form-control')[0].value == ''){
+          if(document.querySelectorAll('.form-control')[0].value == '' || document.querySelectorAll('.form-control')[1].value == ''){
             e.preventDefault();
-            alert('아이디를 입력하세요');
+            alert('아이디 또는 비밀번호를 입력하세요');
+          }
+          else if(document.querySelectorAll('.form-control')[1].value.length < 6){
+            e.preventDefault();
+            alert('비밀번호는 6자 이상으로 입력하세요.');
           }
         })
     </script>
