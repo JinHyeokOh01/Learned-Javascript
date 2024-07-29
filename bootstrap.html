@@ -75,6 +75,32 @@
             alert('비밀번호는 6자 이상으로 입력하세요.');
           }
         })
+
+        function 삼육구게임(value){
+          if(value % 9 == 0){
+            console.log('박수x2');
+          }
+          else if(value % 3 == 0){
+            console.log('박수');
+          }
+          else{
+            console.log('통과');
+          }
+        }
+        삼육구게임(27);
+
+        function 합격했냐(fir, sec){
+          if(fir < 40 || sec < 40){
+            console.log('불합격');
+          }
+          else if(fir + sec >= 120){
+            console.log('합격');
+          }
+          else{
+            console.log('불합격');
+          }
+        }
+        합격했냐(50, 100);
     </script>
     
   </body>
