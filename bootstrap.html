@@ -12,7 +12,16 @@
       <!-- 시작 스타일과 최종 스타일로 class를 나누기 -->
         <div class="white-bg">
           <h4>로그인하세요</h4>
-          <button class="btn btn-danger" id="close">닫기</button>
+          <form action="success.html">
+            <div class="my-3">
+              <input type="text" class="form-control">
+             </div>
+             <div class="my-3">
+               <input type="password" class="form-control">
+             </div>
+             <button type="submit" class="btn btn-primary" id="mysubmit">전송</button>
+             <button type="button" class="btn btn-danger" id="close">닫기</button>
+          </form> 
         </div>
       </div> 
     <button type="button" class="btn btn-primary">Primary</button>
@@ -55,6 +64,13 @@
         document.querySelector('.navbar-toggler').addEventListener('click', function(){
             document.querySelectorAll('.list-group')[0].classList.toggle('show');
         });
+
+        document.querySelector('#mysubmit').addEventListener('click', function(e){
+          if(document.querySelectorAll('.form-control')[0].value == ''){
+            e.preventDefault();
+            alert('아이디를 입력하세요');
+          }
+        })
     </script>
     
   </body>
