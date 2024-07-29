@@ -45,6 +45,9 @@
       <p class="hello">안녕</p>
       <p class="hello">안녕</p>
       <button id="login-btn">로그인</button>
+      <p>태조 이성계가 태어난 연도는?</p>
+      <input type="text" id="answer">
+      <button id="send-answer">제출</button>
       
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -85,6 +88,35 @@
           }
           else{
             document.querySelector('.badge').innerHTML = 'Dark 🔄'
+          }
+        })
+
+        let age = 24;
+        const town = 'cheonan';
+
+        var 예금액 = 60000;
+        var 미래예금액 = 0;
+
+        if(예금액 >= 50000){
+          미래예금액 = 예금액 * 1.2 * 1.2;
+        }
+        else{
+          미래예금액 = 예금액 * 1.15 * 1.15;
+        }
+        console.log(미래예금액);
+
+        var first = 360;
+        console.log(first + first * (2/3) + first * (2/3) * (2/3));
+
+        var answer_count = 0;
+
+        $('#send-answer').on('click', function(){
+          answer_count++;
+          if(document.getElementById('answer').value == 1335){
+            alert('성공');
+          }
+          else if(answer_count >= 3){
+            alert('멍청아');
           }
         })
         </script>
