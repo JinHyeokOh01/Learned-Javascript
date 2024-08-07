@@ -81,6 +81,10 @@
             e.preventDefault();
             alert('비밀번호는 6자 이상으로 입력하세요.');
           }
+          else if(!(/\S+@\S+.\S+/.test(document.querySelectorAll('.form-control')[0].value))){
+            e.preventDefault();
+            alert('이메일 형식이 아닙니다.');
+          }
         })
         var count = 0;
         $('.badge').on('click', function(){
